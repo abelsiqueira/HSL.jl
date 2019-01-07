@@ -11,7 +11,7 @@ hsl_ma57_libdir = joinpath(hsl_ma57_depsdir, "usr", "lib")
 
 provides(SimpleBuild,
          (@build_steps begin
-            BinDeps.ChecksumValidator(hsl_ma57_sha256, hsl_ma57_archive)
+            #BinDeps.ChecksumValidator(hsl_ma57_sha256, hsl_ma57_archive)
             CreateDirectory(hsl_ma57_srcdir)
             FileUnpacker(hsl_ma57_archive, hsl_ma57_srcdir, "hsl_ma57-$hsl_ma57_version")
             (@build_steps begin
